@@ -6,7 +6,7 @@ app = Flask(__name__)
 def home():
     return 'Yahoo OAuth callback server is running!'
 
-@app.toute('/callback')
+@app.route('/callback')
 def callback():
     code = request.args.get('code')
     state = request.args.get('state')
